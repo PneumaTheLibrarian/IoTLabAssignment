@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="190dp"
+    android:layout_height="120dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:background="@drawable/light_purple_background">
+
+    <ImageView
+        android:id="@+id/logoImgDetail"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/light" />
+
+    <TextView
+        android:id="@+id/detailSensorName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="title"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/logoImgDetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logoImgDetail"
+        app:layout_constraintTop_toTopOf="@+id/logoImgDetail" />
+
+    <TextView
+        android:id="@+id/pincurrentValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/logoImgDetail"
+        app:layout_constraintTop_toBottomOf="@+id/logoImgDetail" />
+
+    <TextView
+        android:id="@+id/pinchangeAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#12c737"
+        android:textSize="14sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="@+id/pincurrentValue"
+        app:layout_constraintTop_toBottomOf="@+id/pincurrentValue" />
+
+    <com.majorik.sparklinelibrary.SparkLineLayout
+        android:id="@+id/lineGraph1"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pinchangeAmount"
+        app:layout_constraintTop_toBottomOf="@+id/logoImgDetail"
+        app:s_line_color="#fed32c"
+        app:s_line_thickness="2dp"
+        app:s_marker_background_color="#fed32c"
+        app:s_marker_width="8dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
